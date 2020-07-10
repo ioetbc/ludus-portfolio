@@ -1,0 +1,28 @@
+.video-wrapper {
+    position: relative;
+    transition : opacity .5s linear;
+
+    &:after {
+        content: '';
+        opacity: 0;
+        background: red;
+        width: 100px;
+        height: 100px;
+        position: absolute;
+        top: 50%;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        transform: translateY(-50%);
+        transition : all .5s linear;
+
+    }
+    &:hover {
+        &.controls-true {
+            &:after {
+                opacity: 1;
+                transition : opacity .5s linear;
+            }
+        }
+    }
+}

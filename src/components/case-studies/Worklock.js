@@ -36,7 +36,9 @@ class WorkLock extends Component {
               </div>
             </Link>
 
-            <Video url="website.mp4" id="main-video" />
+            <Video url="website.mp4" id="non-auto" />
+
+            <Video url="website.mp4" id="main-video" autoPlay />
 
             <Colunmn
               class="col3"
@@ -49,7 +51,7 @@ class WorkLock extends Component {
               order="image-left"
             />
 
-            <Video url="ipad.mp4" id="ipad-video" />
+            <Video url="ipad.mp4" id="ipad-video" autoPlay />
 
             <Colunmn
               class="col3"
@@ -61,7 +63,7 @@ class WorkLock extends Component {
               order="image-right"
             />
 
-            <Video url="phone.mp4" id="phone-video" />
+            <Video url="phone.mp4" id="phone-video" autoPlay />
 
             <Quote
               quote="It is a long established fact that a reader will be distracted. It is a long established fact that a reader will be distracted."
