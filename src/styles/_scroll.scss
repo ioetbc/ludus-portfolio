@@ -1,0 +1,13 @@
+.horizontal {
+    @media screen and (min-width: '1000px') {
+        white-space: nowrap;
+        section {
+            display: inline-block;
+            vertical-align: top;
+        }
+    }
+}
+
+.scrollContent {
+    height: 100%;
+}

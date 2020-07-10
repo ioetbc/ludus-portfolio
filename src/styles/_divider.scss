@@ -1,0 +1,12 @@
+.dividerFullHeight {
+    position: relative;
+    display: inline;
+    height: 100vh;
+    &::after {
+        content: '';
+        position: absolute;
+        width: 1px;
+        height: 100vh;
+        background: black;
+    }
+}

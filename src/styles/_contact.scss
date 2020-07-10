@@ -1,0 +1,208 @@
+.aboutWrapper {
+    display: inline-block;
+    position: relative;
+    width: 100vw;
+    height: 100%;
+    vertical-align: top;
+
+    @media screen and (min-width: '1000px') {
+        width: 100vw;
+        height: 100%;
+    }
+
+    * {
+        color: white;
+    }
+
+    .aboutContent {
+        width: 80%;
+        max-width: 260px;
+        margin: 50px 24px 120px 24px;
+
+        @media screen and (min-width: '1000px') {
+            display: flex;
+            align-items: flex-end;
+            width: 100%;
+            max-width: none;
+            margin: 0 0 0 80px;
+        }
+
+        p, li {
+            font-size: 14px;
+            @media screen and (min-width: '1000px') {
+                font-size: 11px;
+            }
+        }
+
+        p {
+            line-height: 17px;
+        }
+
+        li {
+            line-height: 24px;;
+        }
+
+        h6 {
+	        margin-bottom: 16px;
+        }
+
+        .intro {
+            padding-bottom: 120px;
+
+            .email {
+                font-weight: bold;
+                font-size: 16px;
+                color: black;
+            }
+
+            @media screen and (min-width: '1000px') {
+                white-space: normal;
+                width: 290px;
+                height: 460px;
+                padding-bottom: 0;
+                margin-top: 45vh;
+                .col2 {
+                    margin-top: 120px;
+                    display: grid;
+                    grid-template-columns: 1fr 2fr;
+                    .link {
+                        font-size: 12px;
+                        color: #6d6d6d;
+                    }
+                    .col1 {
+                        display: grid;
+                        grid-template-columns: 1fr;
+                    }
+                }
+            }
+        }
+
+        .skillSet {
+            padding-bottom: 104px;
+            position: relative;
+
+            @media screen and (min-width: '1000px') {
+                white-space: normal;
+                width: 290px;
+                height: 460px;
+                padding: 6px 0 0 0;
+            }
+
+            ul {
+                margin-left: 60px;
+
+                li {
+                    margin-bottom: 16px;
+                    font-weight: 200;
+
+                    @media screen and (min-width: '1000px') {
+                        margin-bottom: 8px;
+                        font-size: 16px;
+                    }
+                }
+            }
+        }
+
+        .fuck {
+            position: relative;
+            padding: 0 50px;
+            &:after {
+                content: '';
+                position: absolute;
+                width: calc(100% + 24px);
+                height: 1px;
+                left: -42px;
+                bottom: 20px;
+            }
+            @media screen and (min-width: '1000px') {
+                display: flex;
+                align-items: baseline;
+                height: 100vh;
+
+                &:after {
+                    left: auto;
+                    bottom: 0;
+                    right: 0;
+                    height: 450px;
+                    width: 1px;
+                }
+            }
+        }
+
+        .experience {
+            @media screen and (min-width: '1000px') {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                grid-gap: 80px;
+                margin-right: 15vw;
+                height: 460px;
+                white-space: normal;
+
+            }
+
+            .work {
+                margin-bottom: -50px;
+                position: relative;
+                @media screen and (min-width: '1000px') {
+                    padding: 0 50px;
+                    margin-bottom: 0;
+                }
+
+                h2 {
+                    margin-bottom: 60px;
+                    @media screen and (min-width: '1000px') {
+                        margin-bottom: 120px;
+                    }
+                }
+    
+                .col2 {
+                    margin-bottom: 120px;
+                    @media screen and (min-width: '1000px') {
+                        display: grid;
+                        grid-template-columns: 1fr 1fr;
+                        max-width: 320px;
+                        white-space: normal;
+                        margin-bottom: 42px;
+                    }
+                }
+            }
+            .interests {
+                position: relative;
+                .col2 {
+                    display: grid;
+                    grid-template-columns: 1fr 1fr;
+                    grid-gap: 24px;
+                    margin-bottom: 50px;
+
+                    @media screen and (min-width: '1000px') {
+                        max-width: 410px;
+                        grid-template-columns: 1fr 3fr;
+
+
+                &:after {
+                    content: '';
+                    position: absolute;
+                    width: calc(100% + 24px);
+                    height: 1px;
+                    background: white;
+                    left: -42px;
+                    bottom: 20px;
+
+                    left: auto;
+                    bottom: 0;
+                    right: 0;
+                    height: 450px;
+                    width: 1px;
+                }
+                    }
+
+                    div {
+                        p {
+                            margin-bottom: 16px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

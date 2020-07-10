@@ -1,26 +1,39 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component, Fragment } from "react";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import {
+  CSSTransition,
+  TransitionGroup,
+} from 'react-transition-group';
+import Homepage from "./components/Homepage";
+import WorkLockPage from "./components/case-studies/Worklock";
+import "./App.scss";
+
+class App extends Component {
+  constructor(props) {
+    super(props);
+  }
+  render() {
+    return (
+      <Router>
+        <Route render={({ location }) => (
+          <TransitionGroup>
+          <CSSTransition key={location.key} classNames="fade" timeout={30000}>
+            <Switch>
+              <Route path="/worklock">
+                <WorkLockPage />
+              </Route>
+              <Route exact path="/">
+                <Homepage />
+              </Route>
+            </Switch>
+          </CSSTransition>
+          </TransitionGroup>
+        )}
+        />x
+        </Router>
+    );
+  }
 }
 
 export default App;
