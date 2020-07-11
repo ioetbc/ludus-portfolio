@@ -17,16 +17,8 @@ const Video = (props) => {
       const observer = new IntersectionObserver((entries, observer) => {
         entries.forEach((element) => {
           if (element.isIntersecting) {
-            console.log(
-              "document.getElementById(props.id)",
-              document.getElementById(props.id)
-            );
             document.getElementById(props.id).play();
           } else if (document.getElementById(props.id)) {
-            console.log(
-              "document.getElementById(props.id)",
-              document.getElementById(props.id)
-            );
             document.getElementById(props.id).pause();
           }
         });
@@ -35,7 +27,6 @@ const Video = (props) => {
       observer.observe(section);
     }
   }, []);
-  console.log("video pros", props.url);
 
   return (
     <section>

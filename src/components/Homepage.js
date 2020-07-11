@@ -8,20 +8,19 @@ import DesktopSideBar from "../components/DesktopSideBar";
 import Divider from "../components/Divider";
 import invertScroll from "../utils/invertScroll";
 
-class WorkLock extends Component {
+class Homepage extends Component {
+  constructor(props) {
+    super(props);
+    this.state = { wheelEventAdded: false };
+  }
   componentDidMount() {
-    const item = document.getElementById("example-wrapper");
-    item.addEventListener("wheel", (e) => invertScroll(e, item));
 
-    console.log("mounted");
     const section = document.querySelectorAll(".background")[0];
     const options = { threshold: 0.6 };
     const observer = new IntersectionObserver((entries, observer) => {
       entries.forEach((element) => {
         const body = document.getElementsByTagName("body")[0];
-        console.log("element.isIntersecting", element);
         if (element.isIntersecting) {
-          console.log("intersection the about wraooer");
           body.classList = "bg-black";
         } else {
           body.classList = "bg-white";
@@ -49,12 +48,12 @@ class WorkLock extends Component {
     return (
       <Fragment>
         <div id="example-wrapper" className="horizontal">
-          <div class="scrollContent">
+          <div class="inner-wrapper">
             <MobileHeader />
 
             <DesktopSideBar />
 
-            <div class="hello">
+            <div class="homepage-video-wrapper">
               <div class="vimeo-wrapper">
                 <iframe
                   id="vimeo_player"
@@ -81,11 +80,12 @@ class WorkLock extends Component {
             <About />
 
             <Contact />
+            </div>
           </div>
-        </div>
+
       </Fragment>
     );
   }
 }
 
-export default WorkLock;
+export default Homepage;

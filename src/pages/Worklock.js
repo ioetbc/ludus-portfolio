@@ -1,25 +1,20 @@
 import React, { Component, Fragment } from "react";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
-import Header from "./Header.js";
-import Video from "./Video.js";
-import Colunmn from "./Column.js";
-import Grid from "./Grid.js";
-import Quote from "./Quote.js";
-import CloseIcon from "../../images/close-icon.svg";
-import invertScroll from "../../utils/invertScroll";
+import Header from "../components/case-studies/Header.js";
+import Video from "../components/case-studies/Video.js";
+import Colunmn from "../components/case-studies/Column.js";
+import Grid from "../components/case-studies/Grid.js";
+import Quote from "../components/case-studies/Quote.js";
+import CloseIcon from "../images/close-icon.svg";
+// import invertScroll from "../utils/invertScroll";
 
 class WorkLock extends Component {
   componentDidMount() {
       document.getElementsByTagName("body")[0].style.overflow = "scroll";
-      const item = document.getElementById("example-wrapper");
-      if (item) item.removeEventListener("wheel", invertScroll);
+      // const item = document.getElementById("example-wrapper");
+      // if (item) item.removeEventListener("wheel", invertScroll);
   }
 
-  componentWillUnmount() {
-      document.getElementsByTagName("body")[0].style.overflow = "hidden";
-      const item = document.getElementById("example-wrapper");
-      item.addEventListener("wheel", (e) => invertScroll(e, item));
-  }
   render() {
     return (
       <Fragment>

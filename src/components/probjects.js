@@ -12,10 +12,6 @@ class Probjects extends Component {
 
     
     if (isDesktop) {
-      // const item = document.getElementById("example-wrapper");
-      // document.getElementsByTagName("body")[0].style.overflow = "hidden";
-
-      // item.addEventListener("wheel", (e) => invertScroll(e, item));
       var controller = new window.ScrollMagic.Controller({ vertical: false });
 
       var tween = window.TweenMax.to("#target", 1, { width: "+=150px" });
@@ -104,16 +100,6 @@ class Probjects extends Component {
     }
   }
 
-  // componentWillUnmount() {
-  //   const isDesktop = window.matchMedia("(min-width: 1000px)").matches;
-  //   console.log("isDesktop", isDesktop);
-  //   console.log('you unmounting')
-  //   if (isDesktop) {
-  //     const item = document.getElementById("example-wrapper");
-  //     item.removeEventListener("wheel", invertScroll);
-  //     // document.getElementsByTagName("body")[0].style.overflow = "scroll";
-  //   }
-  // }
 
   render() {
     return (
