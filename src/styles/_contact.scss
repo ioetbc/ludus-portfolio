@@ -1,4 +1,4 @@
-.aboutWrapper {
+.contactWrapper {
     display: inline-block;
     position: relative;
     width: 100vw;
@@ -8,10 +8,10 @@
     @media screen and (min-width: '1000px') {
         width: 100vw;
         height: 100%;
-    }
 
-    * {
-        color: white;
+        .layoutWrapper {
+            width: 100vw;
+        }
     }
 
     .aboutContent {
@@ -67,7 +67,6 @@
                     grid-template-columns: 1fr 2fr;
                     .link {
                         font-size: 12px;
-                        color: #6d6d6d;
                     }
                     .col1 {
                         display: grid;
@@ -99,32 +98,6 @@
                         margin-bottom: 8px;
                         font-size: 16px;
                     }
-                }
-            }
-        }
-
-        .fuck {
-            position: relative;
-            padding: 0 50px;
-            &:after {
-                content: '';
-                position: absolute;
-                width: calc(100% + 24px);
-                height: 1px;
-                left: -42px;
-                bottom: 20px;
-            }
-            @media screen and (min-width: '1000px') {
-                display: flex;
-                align-items: baseline;
-                height: 100vh;
-
-                &:after {
-                    left: auto;
-                    bottom: 0;
-                    right: 0;
-                    height: 450px;
-                    width: 1px;
                 }
             }
         }

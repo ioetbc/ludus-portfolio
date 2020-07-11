@@ -119,7 +119,7 @@ class Probjects extends Component {
         </div>
 
         <div className="probjectWrapper">
-          <div className="layoutWrapper">
+          <div className="layoutWrapper probject">
             <div
               className="probjectContent component"
               style={{ justifyContent: "flex-end" }}
@@ -137,7 +137,7 @@ class Probjects extends Component {
               </div>
             </div>
           </div>
-          <div className="layoutWrapper">
+          <div className="layoutWrapper probject">
             <div
               className="probjectContent component"
               style={{ justifyContent: "flex-end" }}
@@ -153,8 +153,8 @@ class Probjects extends Component {
               </div>
             </div>
           </div>
-          <div className="layoutWrapper">
-            <div
+          <div className="layoutWrapper probject">
+            <div 
               className="probjectContent component"
               style={{ justifyContent: "flex-end" }}
             >
@@ -169,7 +169,7 @@ class Probjects extends Component {
               </div>
             </div>
           </div>
-          <div className="layoutWrapper">
+          <div className="layoutWrapper probject">
             <div
               className="probjectContent component"
               style={{ justifyContent: "flex-end" }}

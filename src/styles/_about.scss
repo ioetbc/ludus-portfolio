@@ -1,13 +1,19 @@
+.about {
+    background: black;
+}
 .aboutWrapper {
     display: inline-block;
     position: relative;
-    width: 100vw;
+
     height: 100%;
     vertical-align: top;
+    margin-top: 80px;
 
     @media screen and (min-width: '1000px') {
         height: 100%;
+        margin-top: 0;
         width: max-content;
+        width: 100vw;
     }
 
     * {
@@ -75,8 +81,7 @@
 // NEW
 
 .intro {
-    padding-bottom: 120px;
-
+    padding-bottom: 40px;
     h2 {
         margin-bottom: 24px;
     }
@@ -87,6 +92,7 @@
         width: 350px;
         height: 460px;
         padding-bottom: 0;
+
         h2 {
             margin-bottom: 8px;
         }
@@ -100,7 +106,7 @@
 }
 
 .skillSet {
-    padding-bottom: 104px;
+    padding-bottom: 40px;
     position: relative;
 
     @media screen and (min-width: '1000px') {
@@ -133,6 +139,7 @@
         margin-right: 15vw;
         height: 200%;
         white-space: normal;
+        margin-left: -30px;
     }
 
     .work {
@@ -182,4 +189,15 @@
             }
         }
     }
+}
+
+.aboutPaddingBlock {
+    display: inline-flex;
+    align-items: flex-end;
+    width: 25vw;
+    min-width: 500px;
+    height: 100vh;
+    margin-left: 80px;
+    margin-bottom: 0;
+    position: relative;
 }

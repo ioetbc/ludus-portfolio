@@ -15,20 +15,20 @@ class Homepage extends Component {
   }
   componentDidMount() {
 
-    const section = document.querySelectorAll(".background")[0];
-    const options = { threshold: 0.6 };
-    const observer = new IntersectionObserver((entries, observer) => {
-      entries.forEach((element) => {
-        const body = document.getElementsByTagName("body")[0];
-        if (element.isIntersecting) {
-          body.classList = "bg-black";
-        } else {
-          body.classList = "bg-white";
-        }
-      });
-    }, options);
+    // const sections = document.querySelectorAll(".aboutWrapper");
+    // const options = { threshold: .7 };
+    // const observer = new IntersectionObserver((entries, observer) => {
+    //   entries.forEach((element) => {
+    //     const body = document.getElementsByTagName("body")[0];
+    //     if (element.isIntersecting) {
+    //       body.classList = "bg-black";
+    //     } else {
+    //       body.classList = "bg-white";
+    //     }
+    //   });
+    // }, options);
 
-    if (section) observer.observe(section);
+    // sections.forEach((section) => observer.observe(section));
 
     const fadeInSections = document.querySelectorAll(".component");
     const fadeInOptions = { threshold: 0.4 };
@@ -42,16 +42,18 @@ class Homepage extends Component {
 
     if (fadeInSections)
       fadeInSections.forEach((section) => fadeInObserver.observe(section));
+
+    const widthOfDocument = document.getElementById('example-wrapper').clientHeight;
+    console.log('widthOfDoc', widthOfDocument)
   }
 
   render() {
     return (
       <Fragment>
+      <DesktopSideBar />
         <div id="example-wrapper" className="horizontal">
           <div class="inner-wrapper">
             <MobileHeader />
-
-            <DesktopSideBar />
 
             <div class="homepage-video-wrapper">
               <div class="vimeo-wrapper">

@@ -3,9 +3,9 @@ import React, { Component, Fragment } from 'react';
 
 const Contact = () => {
     return (
-        <div className="aboutWrapper">
-            <div className="aboutContent">
-            <div className="fuck">
+            <div className="contactWrapper">
+            <div className="layoutWrapper">
+            <div className="aboutContent component">
                 <div className="intro">
                         <h2 style={{ color: 'black' }}>Get in touch</h2>
                         <p className="email">Rob@ludusdesign.co.uk</p>

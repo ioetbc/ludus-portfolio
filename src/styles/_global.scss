@@ -89,7 +89,10 @@ body {
   padding: 0;
   height: 100%;
   width: 100%;
+  @media screen and (min-width: "1000px") {
+
   overflow: hidden;
+  }
 }
 
 #case-study-wrapper {
@@ -113,10 +116,17 @@ body {
 
 #example-wrapper {
   height: 100vh;
-  overflow-y: hidden;
+  @media screen and (min-width: "1000px") {
+    overflow-y: hidden;
+
+  }
 
   .inner-wrapper {
     display: flex;
+    flex-direction: column;
+  @media screen and (min-width: "1000px") {
+      flex-direction: row;
+  }
   }
 }
 
@@ -301,6 +311,10 @@ p {
   margin-bottom: 60px;
   margin-left: 24px;
 
+  &.probject {
+    margin-left: 0;
+    }
+
   @media screen and (min-width: "1000px") {
     display: inline-flex;
     align-items: flex-end;
@@ -310,6 +324,13 @@ p {
     margin-left: 80px;
     margin-bottom: 0;
     position: relative;
+
+    &.probject {
+    margin-left: 20px;
+    }
+    &.contactWrapper {
+      width: 100vw;
+    }
   }
 
   .probjectContent {
@@ -345,46 +366,50 @@ p {
   }
 }
 
-$finalHeight: 100vh;
-$finalWidth: 100%;
-$scrollBarHeight: 1px;
+// SCROLL WRAPPER DESKTOP
+@media screen and (min-width: "1000px") {
+  $finalHeight: 100vh;
+  $finalWidth: 100%;
+  $scrollBarHeight: 1px;
 
-::-webkit-scrollbar {
-  width: $scrollBarHeight;
-  height: $scrollBarHeight;
-}
-
-::-webkit-scrollbar-button {
-  width: $scrollBarHeight;
-  height: $scrollBarHeight;
-}
-
-#example-wrapper {
-  position: absolute;
-  display: block;
-  top: 0;
-  left: 0;
-  margin: 0;
-  padding-top: $scrollBarHeight;
-  overflow-y: auto;
-  overflow-x: hidden;
-  transform: rotate(-90deg) translateY(-$finalHeight);
-  transform-origin: right top;
-  width: 100vh;
-  height: 100vw;
-  & > div {
-    display: block;
-    padding: 5px;
-    transform: rotate(90deg);
-    transform-origin: right top;
+  ::-webkit-scrollbar {
+    width: $scrollBarHeight;
+    height: $scrollBarHeight;
   }
-}
 
-.element_size {
-  padding: $finalHeight 0 0 0;
-  & > div {
-    width: $finalHeight;
-    height: $finalHeight;
-    margin: 10px 0;
+  ::-webkit-scrollbar-button {
+    width: $scrollBarHeight;
+    height: $scrollBarHeight;
+  }
+
+  #example-wrapper {
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    margin: 0;
+    padding-top: $scrollBarHeight;
+    overflow-y: auto;
+    overflow-x: hidden;
+    transform: rotate(-90deg) translateY(-$finalHeight);
+    transform-origin: right top;
+    width: 101vh;
+    height: 100vw;
+    top: -6px;
+    & > div {
+      display: block;
+      padding: 5px;
+      transform: rotate(90deg);
+      transform-origin: right top;
+    }
+  }
+
+  .element_size {
+    padding: $finalHeight 0 0 0;
+    & > div {
+      width: $finalHeight;
+      height: $finalHeight;
+      margin: 10px 0;
+    }
   }
 }
