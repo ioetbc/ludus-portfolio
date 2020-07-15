@@ -14,15 +14,15 @@ class Probjects extends Component {
     if (isDesktop) {
       var controller = new window.ScrollMagic.Controller({ vertical: false });
 
-      var tween = window.TweenMax.to("#target", 1, { width: "+=150px" });
-      var tween2 = window.TweenMax.to("#target2", 1, { width: "+=150px" });
-      var tween3 = window.TweenMax.to("#target3", 1, { width: "+=150px" });
-      var tween4 = window.TweenMax.to("#target4", 1, { width: "+=150px" });
+      var tween = window.TweenMax.to("#hello", 1, {scaleY:1.32, scaleX:1.45, ease:"power3", transformOrigin:"bottom left"});
+      var tween2 = window.TweenMax.to("#hello2", 1, {scaleY:1.32, scaleX:1.45, ease:"power3", transformOrigin:"bottom left"});
+      var tween3 = window.TweenMax.to("#hello3", 1, {scaleY:1.32, scaleX:1.45, ease:"power3", transformOrigin:"bottom left"});
+      var tween4 = window.TweenMax.to("#hello4", 1, {scaleY:1.32, scaleX:1.45, ease:"power3", transformOrigin:"bottom left"});
 
       const halfScreenWidth = window.innerWidth / 2;
 
       new window.ScrollMagic.Scene({
-        triggerElement: "#target",
+        triggerElement: "#hello",
         duration: halfScreenWidth,
       })
         .setTween(tween)
@@ -30,7 +30,7 @@ class Probjects extends Component {
         .addTo(controller);
 
       new window.ScrollMagic.Scene({
-        triggerElement: "#target2",
+        triggerElement: "#hello2",
         duration: halfScreenWidth,
       })
         .setTween(tween2)
@@ -38,7 +38,7 @@ class Probjects extends Component {
         .addTo(controller);
 
       new window.ScrollMagic.Scene({
-        triggerElement: "#target3",
+        triggerElement: "#hello3",
         duration: halfScreenWidth,
       })
         .setTween(tween3)
@@ -46,7 +46,7 @@ class Probjects extends Component {
         .addTo(controller);
 
       new window.ScrollMagic.Scene({
-        triggerElement: "#target4",
+        triggerElement: "#hello4",
         duration: halfScreenWidth,
       })
         .setTween(tween4)
@@ -144,7 +144,7 @@ class Probjects extends Component {
             >
               <div id="target2" className="thumbnailWrapper">
                 <div className="imageWrapper">
-                  <img id="hello" className="thumbnail" src={Placeholder2} />
+                  <img id="hello2" className="thumbnail" src={Placeholder2} />
                   <div className="thumbnailContent">
                     <p className="thumbnailNumber">02.</p>
                     <p className="thumbnailTitle">the Winchester Orangery</p>
@@ -160,7 +160,7 @@ class Probjects extends Component {
             >
               <div id="target3" className="thumbnailWrapper">
                 <div className="imageWrapper">
-                  <img id="hello" className="thumbnail" src={Placeholder3} />
+                  <img id="hello3" className="thumbnail" src={Placeholder3} />
                   <div className="thumbnailContent">
                     <p className="thumbnailNumber">03.</p>
                     <p className="thumbnailTitle">WorkLock</p>
@@ -176,7 +176,7 @@ class Probjects extends Component {
             >
               <div id="target4" className="thumbnailWrapper">
                 <div className="imageWrapper">
-                  <img id="hello" className="thumbnail" src={Placeholder} />
+                  <img id="hello4" className="thumbnail" src={Placeholder} />
                   <div className="thumbnailContent">
                     <p className="thumbnailNumber">04.</p>
                     <p className="thumbnailTitle">the Winchester Orangery</p>
