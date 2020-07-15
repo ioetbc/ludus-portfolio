@@ -6,15 +6,16 @@ import Intro from "../components/Intro";
 import MobileHeader from "../components/MobileHeader";
 import DesktopSideBar from "../components/DesktopSideBar";
 import Divider from "../components/Divider";
+import Menu from "../components/Menu";
 import invertScroll from "../utils/invertScroll";
 
 class Homepage extends Component {
   constructor(props) {
     super(props);
-    this.state = { wheelEventAdded: false };
+    this.state = { menuOpen: false };
+    this.handleMenu = this.handleMenu.bind(this);
   }
   componentDidMount() {
-
     // const sections = document.querySelectorAll(".aboutWrapper");
     // const options = { threshold: .7 };
     // const observer = new IntersectionObserver((entries, observer) => {
@@ -43,14 +44,23 @@ class Homepage extends Component {
     if (fadeInSections)
       fadeInSections.forEach((section) => fadeInObserver.observe(section));
 
-    const widthOfDocument = document.getElementById('example-wrapper').clientHeight;
-    console.log('widthOfDoc', widthOfDocument)
+    const widthOfDocument = document.getElementById("example-wrapper")
+      .clientHeight;
+    console.log("widthOfDoc", widthOfDocument);
+  }
+
+  handleMenu() {
+    this.setState({ menuOpen: !this.state.menuOpen });
   }
 
   render() {
+    const { menuOpen } = this.state;
     return (
       <Fragment>
-      <DesktopSideBar />
+        <DesktopSideBar handleMenu={this.handleMenu} />
+
+        <Menu menuOpen={menuOpen} />
+
         <div id="example-wrapper" className="horizontal">
           <div class="inner-wrapper">
             <MobileHeader />
@@ -82,9 +92,8 @@ class Homepage extends Component {
             <About />
 
             <Contact />
-            </div>
           </div>
-
+        </div>
       </Fragment>
     );
   }
