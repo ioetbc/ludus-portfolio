@@ -1,23 +1,23 @@
-.menu-wrapper {
-    position: fixed;
-    width: 100vw;
-    height: 100vh;
-    background: white;
-    z-index: 4;
-    opacity: 0;
-    transition: opacity .5s ease-in-out;
-    pointer-events: none;
+// .menu-wrapper {
+//     position: fixed;
+//     width: 100vw;
+//     height: 100px;
+//     background: white;
+//     z-index: 4;
+//     opacity: 0;
+//     transition: opacity .5s ease-in-out;
+//     pointer-events: none;
 
-    &.fade-in {
-        opacity: 1;
-        pointer-events: all;
-    }
+//     &.fade-in {
+//         opacity: 1;
+//         pointer-events: all;
+//     }
 
-    .menu-container {
-        width: 50vw;
-        display: flex;
-        justify-content: space-between;
-        margin-left: 20%;
-        margin-top: 40px;
-    }
-}
+//     .menu-container {
+//         width: 50vw;
+//         display: flex;
+//         justify-content: space-between;
+//         margin-left: 20%;
+//         margin-top: 40px;
+//     }
+// }

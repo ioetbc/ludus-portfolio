@@ -4,7 +4,7 @@ import React, { Component, Fragment } from "react";
 
 const About = () => {
   return (
-      <div className="about">
+      <div className="about" id="about">
       <div className="layoutWrapper aboutWrapper">
         <div className="probjectContent component">
           <div className="intro">

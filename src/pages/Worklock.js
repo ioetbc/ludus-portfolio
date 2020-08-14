@@ -6,13 +6,10 @@ import Colunmn from "../components/case-studies/Column.js";
 import Grid from "../components/case-studies/Grid.js";
 import Quote from "../components/case-studies/Quote.js";
 import CloseIcon from "../images/close-icon.svg";
-// import invertScroll from "../utils/invertScroll";
 
 class WorkLock extends Component {
   componentDidMount() {
       document.getElementsByTagName("body")[0].style.overflow = "scroll";
-      // const item = document.getElementById("example-wrapper");
-      // if (item) item.removeEventListener("wheel", invertScroll);
   }
 
   render() {

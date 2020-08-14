@@ -2,10 +2,14 @@ import React, { useEffect } from "react";
 
 const VideoControls = (id) => {
     const video = document.getElementById(id);
-    if (video.paused) {
-        video.play();
-    } else {
-        video.pause();
+    const isDesktop = window.matchMedia("(min-width: 1000px)").matches;
+
+    if (isDesktop) {
+      if (video.paused) {
+          video.play();
+      } else {
+          video.pause();
+      }
     }
 }
 

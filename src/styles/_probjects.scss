@@ -118,6 +118,7 @@
         .thumbnail {
             width: 85%;
             max-height: 395px;
+            transition: all .2s ease-in-out;
 
             @media screen and (min-width: '1000px') {
                 width: 100%

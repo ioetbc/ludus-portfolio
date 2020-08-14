@@ -1,5 +1,4 @@
-import React, { Component, Fragment } from 'react';
-// import style from '../styles/contact.module.scss';
+import React from 'react';
 
 const Contact = () => {
     return (

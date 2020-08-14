@@ -7,13 +7,14 @@ import MobileHeader from "../components/MobileHeader";
 import DesktopSideBar from "../components/DesktopSideBar";
 import Divider from "../components/Divider";
 import Menu from "../components/Menu";
-import invertScroll from "../utils/invertScroll";
+import { Router } from "react-router-dom";
 
 class Homepage extends Component {
   constructor(props) {
     super(props);
     this.state = { menuOpen: false };
     this.handleMenu = this.handleMenu.bind(this);
+    // this.handleNavigation = this.handleNavigation.bind(this);
   }
   componentDidMount() {
     // const sections = document.querySelectorAll(".aboutWrapper");
@@ -53,13 +54,21 @@ class Homepage extends Component {
     this.setState({ menuOpen: !this.state.menuOpen });
   }
 
+  // handleNavigation(id) {
+  //   console.log('click', id);
+
+  //   const element = document.getElementById("about");
+  //   const y = element.getBoundingClientRect().left;
+  //   console.log('y', y)
+  //   Router.push('#about')
+  // }
+
   render() {
     const { menuOpen } = this.state;
     return (
       <Fragment>
         <DesktopSideBar handleMenu={this.handleMenu} />
 
-        <Menu menuOpen={menuOpen} />
 
         <div id="example-wrapper" className="horizontal">
           <div class="inner-wrapper">

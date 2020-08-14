@@ -7,7 +7,6 @@ const Header = props => {
             <p className="pre">
                 {props.pre}
             </p>
-            <a className="link" href={`https://www.${props.url}`}>Go to site</a>
         </header>
     )
 }

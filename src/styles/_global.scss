@@ -72,10 +72,10 @@ th:not([align]) {
   text-align: left;
 }
 
-// @font-face {
-// font-family: 'acumin';
-// src: url('../public/fonts/acumin.woff2') format('woff2'), /* Super Modern Browsers */
-// }
+@font-face {
+  font-family: 'acumin';
+  src: url('../fonts/acumin.woff2') format('woff2'), /* Super Modern Browsers */
+}
 
 html,
 body {
