@@ -76,11 +76,15 @@ class Homepage extends Component {
               </video>
             </div>
 
+            <Divider ThirdWidth />
+            
             <Intro />
+
+            <Divider FullWidth />
 
             <Probjects />
 
-            <Divider fullHeight={true} />
+            <Divider fullHeight />
 
             <About />
 

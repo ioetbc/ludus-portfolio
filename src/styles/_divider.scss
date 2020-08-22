@@ -1,14 +1,50 @@
 .dividerFullHeight {
     @media screen and (min-width: "1000px") {
-    position: relative;
-    display: inline;
-    height: 100vh;
-    &::after {
-        content: '';
-        position: absolute;
-        width: 1px;
+        position: relative;
+        display: inline;
         height: 100vh;
-        background: black;
+        &::after {
+            content: '';
+            position: absolute;
+            width: 1px;
+            height: 100vh;
+            background: black;
+        }
     }
 }
+
+.dividerThirdWidthMobile {
+    @media screen and (max-width: "1000px") {
+        &::after {
+            content: ''; 
+            position: absolute;
+            width: 75vw;
+            height: 1px;
+            background: black;
+        }
+
+        &.white-true {
+            &::after {
+                background: white;
+            }
+        }
+    }
+}
+
+.dividerFullWidthMobile {
+    @media screen and (max-width: "1000px") {
+        &::after {
+            content: '';
+            position: absolute;
+            width: 100vw;
+            height: 1px;
+            background: black;
+        }
+
+        &.white-true {
+            &::after {
+                background: white;
+            }
+        }
+    }
 }

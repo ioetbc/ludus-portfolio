@@ -320,6 +320,7 @@ body {
 
     &.intro {
       max-width: 380px;
+      position: relative;
     }
 
     .intro-pre {
@@ -346,6 +347,16 @@ body {
       color: black;
       @media screen and (min-width: "1000px") {
         letter-spacing: 1px;
+      }
+    }
+  }
+
+  &.aboutWrapper {
+    @media screen and (max-width: "1000px") {
+      position: relative;
+      margin-right: 24px;
+      h6 {
+        margin-bottom: 24px;
       }
     }
   }

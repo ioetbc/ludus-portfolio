@@ -1,50 +1,57 @@
-import React, { Component, Fragment } from "react";
-
-// import style from '../styles/about.module.scss';
+import React from "react";
+import Divider from "../components/Divider";
 
 const About = () => {
   return (
       <div className="about" id="about">
+
+      <div style={{ position: 'relative', display: 'inline-block' }}>
       <div className="layoutWrapper aboutWrapper">
         <div className="probjectContent component">
           <div className="intro">
             <h2 className="font__extra-large">About Me</h2>
-
               <p className="font__medium">
                 A Hampshire based designer with five years of experience working
                 at digital agencies, marketing agencies and freelancing
               </p>
-
           </div>
         </div>
+        </div>
+        <Divider ThirdWidth white />
       </div>
 
-      <div className="layoutWrapper aboutWrapper">
-        <div className="probjectContent component">
-          <div className="skillSet">
-            <h6 className="font__extra-small">Skill Set</h6>
-            <ul className="font__large">
-              <li>Brand Identity and Positioning</li>
-              <li>Graphic Design</li>
-              <li>Web and UX Design</li>
-              <li>Illustration</li>
-              <li>Motion Design</li>
-              <li>Creative Direction</li>
-            </ul>
+
+      <div style={{ position: 'relative', display: 'inline-block' }}>
+        <div className="layoutWrapper aboutWrapper">
+          <div className="probjectContent component">
+            <div className="skillSet">
+              <h6 className="font__extra-small bold">Skill Set</h6>
+              <ul className="font__large">
+                <li>Brand Identity and Positioning</li>
+                <li>Graphic Design</li>
+                <li>Web and UX Design</li>
+                <li>Illustration</li>
+                <li>Motion Design</li>
+                <li>Creative Direction</li>
+              </ul>
+            </div>
           </div>
         </div>
+        <Divider FullWidth white />
       </div>
 
       <div className="layoutWrapper aboutWrapper">
         <div className="probjectContent component">
           <div className="experience">
-            <div className="work">
+            <div className="interests">
               <div className="col2">
                 <h6 className="font__extra-small">Current Postitions</h6>
-                <p className="font__small">
-                  Think Creative, designer
-                </p>
+                <div>
+                <a href="https://www.think-creative.co.uk/" className="font__small">
+                  Think Creative
+                </a><span className="font__small"> - designer</span></div>
               </div>
+              
               <div className="col2">
               <h6 className="font__extra-small">Achievments</h6>
               <div className="font__small">
