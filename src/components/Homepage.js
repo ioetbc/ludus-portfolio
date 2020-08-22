@@ -12,26 +12,12 @@ import { Router } from "react-router-dom";
 class Homepage extends Component {
   constructor(props) {
     super(props);
-    this.state = { menuOpen: false };
+    this.state = { menuOpen: false, mute: true };
     this.handleMenu = this.handleMenu.bind(this);
-    // this.handleNavigation = this.handleNavigation.bind(this);
+    this.videoControls = this.videoControls.bind(this);
   }
+
   componentDidMount() {
-    // const sections = document.querySelectorAll(".aboutWrapper");
-    // const options = { threshold: .7 };
-    // const observer = new IntersectionObserver((entries, observer) => {
-    //   entries.forEach((element) => {
-    //     const body = document.getElementsByTagName("body")[0];
-    //     if (element.isIntersecting) {
-    //       body.classList = "bg-black";
-    //     } else {
-    //       body.classList = "bg-white";
-    //     }
-    //   });
-    // }, options);
-
-    // sections.forEach((section) => observer.observe(section));
-
     const fadeInSections = document.querySelectorAll(".component");
     const fadeInOptions = { threshold: 0.4 };
     const fadeInObserver = new IntersectionObserver((entries, observer) => {
@@ -48,23 +34,28 @@ class Homepage extends Component {
     const widthOfDocument = document.getElementById("example-wrapper")
       .clientHeight;
     console.log("widthOfDoc", widthOfDocument);
+
+    const video = document.getElementById('vimeo_player');
+    video.volume = 0;
+
   }
 
   handleMenu() {
     this.setState({ menuOpen: !this.state.menuOpen });
   }
 
-  // handleNavigation(id) {
-  //   console.log('click', id);
+  videoControls = () => {
+    const video = document.getElementById('vimeo_player');
 
-  //   const element = document.getElementById("about");
-  //   const y = element.getBoundingClientRect().left;
-  //   console.log('y', y)
-  //   Router.push('#about')
-  // }
+    if (video.volume === 0) {
+      this.setState({ mute: false }, () => video.volume = 1);
+    } else {
+      this.setState({ mute: true }, () => video.volume = 0);
+    }
+  }
 
   render() {
-    const { menuOpen } = this.state;
+    const { menuOpen, mute } = this.state;
     return (
       <Fragment>
         <DesktopSideBar handleMenu={this.handleMenu} />
@@ -73,21 +64,16 @@ class Homepage extends Component {
         <div id="example-wrapper" className="horizontal">
           <div class="inner-wrapper">
             <MobileHeader />
-
-            <div class="homepage-video-wrapper">
-              <div class="vimeo-wrapper">
-                <iframe
-                  id="vimeo_player"
-                  src="//player.vimeo.com/video/108960330?title=0&amp;byline=0&amp;portrait=0&amp;autoplay=1&amp;loop=1&amp;background=1"
-                  width="100%"
-                  height="100%"
-                  class="video hide-on-mobile"
-                  frameborder="0"
-                  webkitallowfullscreen=""
-                  mozallowfullscreen=""
-                  allowfullscreen=""
-                ></iframe>
-              </div>
+            
+        
+            <div className="intro-video-wrapper" onClick={() => this.videoControls()}>
+              <p className="toggle-mute">{mute ? 'Unmute' : "Mute"}</p>
+              <video loop id="vimeo_player" className="intro-video" autoPlay>
+                  <source
+                    src={require("../images/PexelsVideos1531418.mp4")}
+                    type="video/mp4"
+                  />
+              </video>
             </div>
 
             <Intro />

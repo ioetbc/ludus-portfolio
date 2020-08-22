@@ -26,3 +26,23 @@
         }
     }
 }
+
+.intro-video-wrapper {
+    position: relative;
+    transition : opacity .5s linear;
+    margin-left: 100%;
+
+    .toggle-mute {
+        position: absolute;
+        top: 30px;
+        right: 30px;
+        color: white;
+        font-size: 22px;
+        cursor: pointer;
+        z-index: 1;
+    }
+
+    .intro-video {
+        width: 100vw;
+    }
+}

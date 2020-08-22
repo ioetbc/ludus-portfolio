@@ -5,11 +5,11 @@ const VideoControls = (id) => {
     const isDesktop = window.matchMedia("(min-width: 1000px)").matches;
 
     if (isDesktop) {
-      if (video.paused) {
-          video.play();
-      } else {
-          video.pause();
-      }
+    if (video.paused) {
+        video.play();
+    } else {
+        video.pause();
+    }
     }
 }
 
