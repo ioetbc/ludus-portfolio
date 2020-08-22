@@ -35,7 +35,7 @@ const Video = (props) => {
   return (
     <section>
         <div className={`video-wrapper controls-${!props.autoPlay}`} onClick={() => !props.autoPlay && VideoControls(props.id)}>
-            <video loop id={props.id} autoPlay={props.autoPlay}>
+            <video className='video' loop id={props.id} autoPlay={props.autoPlay}>
                 <source
                 src={require(`../../images/probjects/worklock/${props.url}`)}
                 type="video/mp4"

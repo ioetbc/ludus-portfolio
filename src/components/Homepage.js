@@ -78,8 +78,6 @@ class Homepage extends Component {
 
             <Intro />
 
-            <Divider fullHeight={true} />
-
             <Probjects />
 
             <Divider fullHeight={true} />

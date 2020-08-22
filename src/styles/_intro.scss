@@ -52,14 +52,6 @@
             }
         }
 
-
-        p, li {
-            font-size: 14px;
-            @media screen and (min-width: '1000px') {
-                font-size: 11px;
-            }
-        }
-
         p {
             line-height: 17px;
         }
@@ -74,14 +66,6 @@
 
         .intro {
             padding-bottom: 120px;
-
-            h2 {
-                font-size: 32px;
-
-                @media screen and (min-width: '1000px') {
-                    font-size: 30px;
-                }
-            }
 
             @media screen and (min-width: '1000px') {
                 padding: 0;
@@ -106,7 +90,6 @@
         .col2 {
             margin-bottom: 120px;
             p {
-                font-size: 28px;
                 line-height: 24px;
                 font-weight: lighter;
                 color: #545454;
@@ -114,7 +97,6 @@
             @media screen and (min-width: '1000px') {
                 margin-bottom: 42px;
                 p {
-                    font-size: 22px;
                     letter-spacing: 1px;
                     line-height: 14px;
                 }

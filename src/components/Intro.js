@@ -10,10 +10,11 @@ function scrollTo() {
 
 const About = () => {
     return (
-        <div className="layoutWrapper">
-        <div className="probjectContent component">
-            <h2>I'm Rob Game.</h2>
-            <p className="pre">Ix like to take design in a different direction.</p>
+    <div className="layoutWrapper intro">
+        <div className="probjectContent component intro">
+            <h2 className="font__extra-large">I'm Rob Game.</h2>
+            <p className="intro-pre font__large">A process led creative that likes to take design in a different direction.</p>
+            <p className="intro-para font__small">Enjoy a showcase of projects that I have done on a freelace basis, where I have been the sole creative on the project.</p>
         </div>
         <img onClick={() => scrollTo()} className="downArrow" src={DownArrow} />
     </div>

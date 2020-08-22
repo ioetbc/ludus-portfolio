@@ -1,3 +1,6 @@
+.video {
+    max-width: 100%;
+}
 .video-wrapper {
     position: relative;
     transition : opacity .5s linear;
@@ -37,12 +40,12 @@
         top: 30px;
         right: 30px;
         color: white;
-        font-size: 22px;
         cursor: pointer;
         z-index: 1;
     }
 
     .intro-video {
         width: 100vw;
+        height: 100vh;
     }
 }

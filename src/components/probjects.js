@@ -138,20 +138,6 @@ class Probjects extends Component {
   render() {
     return (
       <Fragment>
-        <div className="layoutWrapper">
-          <div className="probjectContent component">
-            <h2 id="introHeading">Selected Work</h2>
-            <p className="pre">
-              Here are a few projects that I have done on a freelance basis,
-              where I have neem the sole creative on the project. Want to see
-              more of my work.
-            </p>
-            <a className="link" href="mailto:rob@ludusdesign.co.uk">
-              Get in touch
-            </a>
-          </div>
-        </div>
-
         <div className="probjectWrapper">
           <div className="layoutWrapper probject">
             <div
@@ -163,8 +149,8 @@ class Probjects extends Component {
                   <div className="imageWrapper">
                     <img id="hello" className="thumbnail" src={Placeholder} />
                     <div className="thumbnailContent">
-                      <p className="thumbnailNumber">01.</p>
-                      <p className="thumbnailTitle">WorkLock</p>
+                      <p className="thumbnailNumber font__small">01.</p>
+                      <p className="thumbnailTitle font__medium">WorkLock</p>
                     </div>
                   </div>
                 </Link>
@@ -180,8 +166,8 @@ class Probjects extends Component {
                 <div className="imageWrapper">
                   <img id="hello2" className="thumbnail" src={Placeholder2} />
                   <div className="thumbnailContent">
-                    <p className="thumbnailNumber">02.</p>
-                    <p className="thumbnailTitle">the Winchester Orangery</p>
+                    <p className="thumbnailNumber font__small">02.</p>
+                    <p className="thumbnailTitle font__medium">the Winchester Orangery</p>
                   </div>
                 </div>
               </div>
@@ -196,8 +182,8 @@ class Probjects extends Component {
                 <div className="imageWrapper">
                   <img id="hello3" className="thumbnail" src={Placeholder3} />
                   <div className="thumbnailContent">
-                    <p className="thumbnailNumber">03.</p>
-                    <p className="thumbnailTitle">WorkLock</p>
+                    <p className="thumbnailNumber font__small">03.</p>
+                    <p className="thumbnailTitle font__medium">WorkLock</p>
                   </div>
                 </div>
               </div>
@@ -212,8 +198,8 @@ class Probjects extends Component {
                 <div className="imageWrapper">
                   <img id="hello4" className="thumbnail" src={Placeholder} />
                   <div className="thumbnailContent">
-                    <p className="thumbnailNumber">04.</p>
-                    <p className="thumbnailTitle">the Winchester Orangery</p>
+                    <p className="thumbnailNumber font__small">04.</p>
+                    <p className="thumbnailTitle font__medium">the Winchester Orangery</p>
                   </div>
                 </div>
               </div>

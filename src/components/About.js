@@ -8,14 +8,13 @@ const About = () => {
       <div className="layoutWrapper aboutWrapper">
         <div className="probjectContent component">
           <div className="intro">
-            <h2>About Me</h2>
-            <div className="col2">
-              <h6>Rob Game</h6>
-              <p>
+            <h2 className="font__extra-large">About Me</h2>
+
+              <p className="font__medium">
                 A Hampshire based designer with five years of experience working
                 at digital agencies, marketing agencies and freelancing
               </p>
-            </div>
+
           </div>
         </div>
       </div>
@@ -23,13 +22,14 @@ const About = () => {
       <div className="layoutWrapper aboutWrapper">
         <div className="probjectContent component">
           <div className="skillSet">
-            <h6>Skill Set</h6>
-            <ul>
-              <li>Design</li>
-              <li>Branding</li>
+            <h6 className="font__extra-small">Skill Set</h6>
+            <ul className="font__large">
+              <li>Brand Identity and Positioning</li>
+              <li>Graphic Design</li>
+              <li>Web and UX Design</li>
               <li>Illustration</li>
-              <li>Motion Graphics</li>
-              <li>Direction</li>
+              <li>Motion Design</li>
+              <li>Creative Direction</li>
             </ul>
           </div>
         </div>
@@ -39,21 +39,23 @@ const About = () => {
         <div className="probjectContent component">
           <div className="experience">
             <div className="work">
-              <h2>Experience</h2>
               <div className="col2">
-                <h6>Current Postitions</h6>
-                <p>
-                  Think Creative - Designer World Food Programme, Consultant
-                  Freelance
+                <h6 className="font__extra-small">Current Postitions</h6>
+                <p className="font__small">
+                  Think Creative, designer
                 </p>
               </div>
               <div className="col2">
-                <h6>Previous Postitions</h6>
-                <ul>
-                  <li>Big Mallet - lead designer</li>
-                  <li>Clockwork Pie - designer</li>
-                </ul>
+              <h6 className="font__extra-small">Achievments</h6>
+              <div className="font__small">
+                <p>Distinction in Creative multimedia and Design FDA</p>
+                <p>
+                  A levels in Media Studies, Music Technolog and English
+                  Lit/Lang
+                </p>
+                <p>250kg Deadlift</p>
               </div>
+            </div>
             </div>
           </div>
         </div>
@@ -64,8 +66,8 @@ const About = () => {
           <div className="experience">
             <div className="interests">
               <div className="col2">
-                <h6>Interests and preferences</h6>
-                <ul>
+                <h6 className="font__extra-small">Interests and preferences</h6>
+                <ul className="font__small">
                   <li>Playing Guitar</li>
                   <li>Strenth and conditioning</li>
                   <li>Eating Lasagne</li>
@@ -73,17 +75,6 @@ const About = () => {
                   <li>Video games</li>
                   <li>Jaffa cakes</li>
                 </ul>
-              </div>
-              <div className="col2">
-                <h6>Achievments</h6>
-                <div>
-                  <p>Distinction in Creative multimedia and Design FDA</p>
-                  <p>
-                    A levels in Media Studies, Music Technolog and English
-                    Lit/Lang
-                  </p>
-                  <p>250kg Deadlift</p>
-                </div>
               </div>
             </div>
           </div>

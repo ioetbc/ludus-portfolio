@@ -40,22 +40,18 @@
             margin: 180px 0 16px 0;
             color: #7b7b7b;
             font-weight: 200;
-            font-size: 14px;
             line-height: 1.6;
             @media screen and (min-width: '1000px') {
                 max-width: 220px;
                 margin: 0;
                 margin-left: auto;
-                font-size: 14px;
             }
         }
         .link {
             color: black;
             text-decoration: none;
-            font-size: 14px;
             @media screen and (min-width: '1000px') {
                 text-align: right;
-                font-size: 11px;
             }
         }
     }
@@ -82,7 +78,6 @@
         
             .title {
                 font-weight: 400;
-                font-size: 16px;
                 margin: 32px 0 50px 0;
             }
         }

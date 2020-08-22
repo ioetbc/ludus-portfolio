@@ -27,13 +27,6 @@
             margin: 0 0 0 80px;
         }
 
-        p, li {
-            font-size: 14px;
-            @media screen and (min-width: '1000px') {
-                font-size: 11px;
-            }
-        }
-
         p {
             line-height: 17px;
         }
@@ -51,7 +44,6 @@
 
             .email {
                 font-weight: bold;
-                font-size: 16px;
                 color: black;
             }
 
@@ -65,9 +57,6 @@
                     margin-top: 120px;
                     display: grid;
                     grid-template-columns: 1fr 2fr;
-                    .link {
-                        font-size: 12px;
-                    }
                     .col1 {
                         display: grid;
                         grid-template-columns: 1fr;
@@ -96,7 +85,6 @@
 
                     @media screen and (min-width: '1000px') {
                         margin-bottom: 8px;
-                        font-size: 16px;
                     }
                 }
             }
