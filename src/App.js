@@ -4,6 +4,7 @@ import { BrowserRouter as HashRouter, Switch, Route, Link } from "react-router-d
 import { CSSTransition, TransitionGroup } from "react-transition-group";
 import Homepage from "./components/Homepage";
 import WorkLockPage from "./pages/Worklock";
+import QuivaPage from "./pages/Quiva";
 import "./App.scss";
 
 class App extends Component {
@@ -18,15 +19,24 @@ class App extends Component {
                 <Route exact path="/">
                 <Homepage />
               </Route>
-                  <Route
-                    exact
-                    path="/worklock"
-                    render={() => (
-           
-                        <WorkLockPage />
-     
-                    )}
-                  />
+              <Route
+                exact
+                path="/worklock"
+                render={() => (
+        
+                    <WorkLockPage />
+  
+                )}
+              />
+              <Route
+                exact
+                path="/quiva"
+                render={() => (
+        
+                    <QuivaPage />
+  
+                )}
+              />
                 </Switch>
               </CSSTransition>
             </TransitionGroup>

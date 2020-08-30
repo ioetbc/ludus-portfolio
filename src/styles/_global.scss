@@ -203,6 +203,12 @@ body {
   }
 }
 
+.video-subpage {
+  @media screen and (max-width: "760px") {
+    margin-left: -24px;
+  }
+}
+
 // TRANSITIONSTRANSITIONSTRANSITIONSTRANSITIONSTRANSITIONSTRANSITIONSTRANSITIONSTRANSITIONSTRANSITIONSTRANSITIONSTRANSITIONSTRANSITIONS
 
 .page-transition-enter {

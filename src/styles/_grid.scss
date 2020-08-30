@@ -1,11 +1,23 @@
 .twoUp {
+    @media screen and (min-width: '760px') {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 16px;
+    }
     @media screen and (min-width: '1000px') {
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-gap: 16px;
     }
+
+    img {
+        @media screen and (max-width: '1000px') {
+            margin-bottom: 8px;
+        }
+    }
 }
 
 .fullWidth {
+    width: 100%;
     margin-top: 16px;
 }

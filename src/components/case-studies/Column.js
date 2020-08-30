@@ -4,8 +4,8 @@ const Column = props => {
     return (
         <section>
             {props.order === 'image-left' ?
-                <div className={props.class} style={{ gridTemplateColumns: '5fr 3fr 2fr' }}>
-                    <img src={require(`../../images/probjects/worklock/${(props.img)}`)} />
+                <div className={`${props.class} column${props.order === 'image-left' ? '-reverse' : null}`}>
+                    <img className="video-subpage" src={require(`../../images/probjects/${(props.img)}`)} />
                         <h5
                             className="title"
                             style={{ textAlign: "center" }}
@@ -17,12 +17,12 @@ const Column = props => {
                     </div>
                 </div>
                 :
-                <div className={props.class} style={{ gridTemplateColumns: '2fr 3fr 5fr' }}>
+                <div className={`${props.class} column${props.order === 'image-left' ? '-reverse' : ''}`}>
                     <h5 className="title">{props.title}</h5>
                     <div>
                         {props.content.map(p => <p>{p}</p>)}
                     </div>
-                    <img src={require(`../../images/probjects/worklock/${(props.img)}`)} />
+                    <img className="video-subpage" src={require(`../../images/probjects/${(props.img)}`)} />
                 </div>
             }   
         </section>

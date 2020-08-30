@@ -1,9 +1,9 @@
 .projectWrapper {
-    max-width: 1400px;
+    max-width: 1550px;
     margin: 0 auto;
     .projectHeader { 
         max-width: 220px;
-        margin: 120px 0 24px 42px;
+        margin: 120px 0 24px 24px;
         position: relative;
 
         &:after {
@@ -58,27 +58,29 @@
 
     main {
         padding: 60px 0 60px 24px;
-        max-width: 70%;
+        max-width: 80%;
+        max-width: 7    0%;
         position: relative;
         @media screen and (min-width: '1000px') {
             padding: 24px 8% 24px 20%;
             max-width: none;
         }
         section {
-            margin-bottom: 80px;
+            margin-bottom: 40px;
     
             img {
-                max-width: calc(110% + 24px);
-                margin-left: -24px;
-                @media screen and (min-width: '1000px') {
-                    margin-left: 0;
-                    max-width: 100%;
+                width: calc(100% + 24px);
+                @media screen and (min-width: '768px') {
+                    width: 100%;
                 }
             }
         
             .title {
                 font-weight: 400;
                 margin: 32px 0 50px 0;
+                @media screen and (min-width: '1000px') {
+                    margin: 0 0 50px 0;
+                }
             }
         }
     }
@@ -101,7 +103,7 @@
     }
 
     .homeButton {
-        width: 30px;
+        width: 24px;
         cursor: pointer;
         pointer-events: all;
         &:after {

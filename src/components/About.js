@@ -4,7 +4,6 @@ import Divider from "../components/Divider";
 const About = () => {
   return (
       <div className="about" id="about">
-
       <div style={{ position: 'relative', display: 'inline-block' }}>
       <div className="layoutWrapper aboutWrapper">
         <div className="probjectContent component">
