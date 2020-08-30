@@ -5,6 +5,9 @@ import { CSSTransition, TransitionGroup } from "react-transition-group";
 import Homepage from "./components/Homepage";
 import WorkLockPage from "./pages/Worklock";
 import QivaPage from "./pages/Qiva";
+import OrangeryPage from "./pages/Orangery";
+import ShleterBoxPage from "./pages/Shelter-Box";
+import LockdownPage from "./pages/Lockdown-ludere";
 import "./App.scss";
 
 class App extends Component {
@@ -34,6 +37,30 @@ class App extends Component {
                 render={() => (
         
                     <QivaPage />
+  
+                )}
+              />
+              <Route
+                exact
+                path="/orangery"
+                render={() => (
+                    <OrangeryPage />
+  
+                )}
+              />
+              <Route
+                exact
+                path="/shelter-box"
+                render={() => (
+                    <ShleterBoxPage />
+  
+                )}
+              />
+              <Route
+                exact
+                path="/lockdown-ludere"
+                render={() => (
+                    <LockdownPage />
   
                 )}
               />

@@ -32,6 +32,8 @@ const Video = (props) => {
     }
   }, []);
 
+  console.log('../../images/probjects/${props.url}', `../../images/probjects/${props.url}`)
+
   return (
     <section>
         <div className={`video-wrapper controls-${!props.autoPlay} video-subpage`} onClick={() => !props.autoPlay && VideoControls(props.id)}>
