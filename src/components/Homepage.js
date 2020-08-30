@@ -41,6 +41,7 @@ class Homepage extends Component {
   }
 
   handleMenu() {
+    console.log('menuOpen')
     this.setState({ menuOpen: !this.state.menuOpen });
   }
 
@@ -56,17 +57,22 @@ class Homepage extends Component {
 
   render() {
     const { menuOpen, mute } = this.state;
+
     return (
       <Fragment>
         <DesktopSideBar handleMenu={this.handleMenu} />
-
+        {menuOpen &&
+          <Menu
+            menuOpen={menuOpen}
+            handleMenu={this.handleMenu}
+          />
+        }
 
         <div id="example-wrapper" className="horizontal">
           <div class="inner-wrapper">
             <MobileHeader />
-            
-        
-            <div className="intro-video-wrapper" onClick={() => this.videoControls()}>
+
+            <div className="intro-video-wrapper" id="menu-intro" onClick={() => this.videoControls()}>
               <p className="toggle-mute">{mute ? 'Unmute' : "Mute"}</p>
               <video loop id="vimeo_player" className="intro-video" autoPlay>
                   <source

@@ -2,7 +2,7 @@ import React from 'react';
 
 const Contact = () => {
     return (
-            <div className="contactWrapper">
+            <div className="contactWrapper" id="menu-contact">
             <div className="layoutWrapper">
             <div className="aboutContent component">
                 <div className="intro">
