@@ -41,7 +41,6 @@ class Homepage extends Component {
   }
 
   handleMenu() {
-    console.log('menuOpen')
     this.setState({ menuOpen: !this.state.menuOpen });
   }
 
@@ -70,7 +69,7 @@ class Homepage extends Component {
 
         <div id="example-wrapper" className="horizontal">
           <div class="inner-wrapper">
-            <MobileHeader />
+            <MobileHeader handleMenu={this.handleMenu} />
 
             <div className="intro-video-wrapper" id="menu-intro" onClick={() => this.videoControls()}>
               <p className="toggle-mute">{mute ? 'Unmute' : "Mute"}</p>
