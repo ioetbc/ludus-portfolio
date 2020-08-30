@@ -1,9 +1,14 @@
 import React, { Component, Fragment } from "react";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
-import Placeholder from "../images/palceholder-probject-image.jpeg";
-import Placeholder2 from "../images/palceholder-probject-image-2.jpeg";
-import Placeholder3 from "../images/palceholder-probject-image-3.jpeg";
+import ThumbnailQiva from "../images/probjects/thumbnails/01_QIVA.jpg";
+import ThumbnailOrangery from "../images/probjects/thumbnails/02_TWO.jpg";
+import ThumbnailShelterBox from "../images/probjects/thumbnails/03_SB.jpg";
+import ThumbnailWorkLock from "../images/probjects/thumbnails/04_WL.jpg";
+import ThumbnailLockdown from "../images/probjects/thumbnails/05_LL.jpg";
+
+
+
 class Probjects extends Component {
   constructor(props) {
     super(props);
@@ -147,10 +152,10 @@ class Probjects extends Component {
               <div id="target" className="thumbnailWrapper">
                 <Link to="/worklock">
                   <div className="imageWrapper">
-                    <img id="hello" className="thumbnail" src={Placeholder} />
+                    <img id="hello" className="thumbnail" src={ThumbnailQiva} />
                     <div className="thumbnailContent">
                       <p className="thumbnailNumber font__small">01.</p>
-                      <p className="thumbnailTitle font__medium">WorkLock</p>
+                      <p className="thumbnailTitle font__medium">Qiva</p>
                     </div>
                   </div>
                 </Link>
@@ -163,12 +168,12 @@ class Probjects extends Component {
               style={{ justifyContent: "flex-end" }}
             >
               <div id="target2" className="thumbnailWrapper">
-              <Link to="/qiva">
+              <Link to="/orangery">
                 <div className="imageWrapper">
-                  <img id="hello2" className="thumbnail" src={Placeholder2} />
+                  <img id="hello2" className="thumbnail" src={ThumbnailOrangery} />
                   <div className="thumbnailContent">
                     <p className="thumbnailNumber font__small">02.</p>
-                    <p className="thumbnailTitle font__medium">Qiva</p>
+                    <p className="thumbnailTitle font__medium">The Winchester Orangery</p>
                   </div>
                 </div>
               </Link>
@@ -182,10 +187,10 @@ class Probjects extends Component {
             >
               <div id="target3" className="thumbnailWrapper">
                 <div className="imageWrapper">
-                  <img id="hello3" className="thumbnail" src={Placeholder3} />
+                  <img id="hello3" className="thumbnail" src={ThumbnailShelterBox} />
                   <div className="thumbnailContent">
                     <p className="thumbnailNumber font__small">03.</p>
-                    <p className="thumbnailTitle font__medium">WorkLock</p>
+                    <p className="thumbnailTitle font__medium">ShelterBox COVID-19 Appeal</p>
                   </div>
                 </div>
               </div>
@@ -198,10 +203,10 @@ class Probjects extends Component {
             >
               <div id="target4" className="thumbnailWrapper">
                 <div className="imageWrapper">
-                  <img id="hello4" className="thumbnail" src={Placeholder} />
+                  <img id="hello4" className="thumbnail" src={ThumbnailLockdown} />
                   <div className="thumbnailContent">
                     <p className="thumbnailNumber font__small">04.</p>
-                    <p className="thumbnailTitle font__medium">the Winchester Orangery</p>
+                    <p className="thumbnailTitle font__medium">Lockdown Ludere</p>
                   </div>
                 </div>
               </div>
