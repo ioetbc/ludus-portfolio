@@ -4,7 +4,7 @@ import { BrowserRouter as HashRouter, Switch, Route, Link } from "react-router-d
 import { CSSTransition, TransitionGroup } from "react-transition-group";
 import Homepage from "./components/Homepage";
 import WorkLockPage from "./pages/Worklock";
-import QuivaPage from "./pages/Quiva";
+import QivaPage from "./pages/Qiva";
 import "./App.scss";
 
 class App extends Component {
@@ -30,10 +30,10 @@ class App extends Component {
               />
               <Route
                 exact
-                path="/quiva"
+                path="/qiva"
                 render={() => (
         
-                    <QuivaPage />
+                    <QivaPage />
   
                 )}
               />

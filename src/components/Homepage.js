@@ -59,7 +59,10 @@ class Homepage extends Component {
 
     return (
       <Fragment>
-        <DesktopSideBar handleMenu={this.handleMenu} />
+        <DesktopSideBar
+          handleMenu={this.handleMenu}
+          menuOpen={menuOpen}
+        />
         {menuOpen &&
           <Menu
             menuOpen={menuOpen}
@@ -69,7 +72,10 @@ class Homepage extends Component {
 
         <div id="example-wrapper" className="horizontal">
           <div class="inner-wrapper">
-            <MobileHeader handleMenu={this.handleMenu} />
+            <MobileHeader
+              handleMenu={this.handleMenu}
+              menuOpen={menuOpen}
+            />
 
             <div className="intro-video-wrapper" id="menu-intro" onClick={() => this.videoControls()}>
               <p className="toggle-mute">{mute ? 'Unmute' : "Mute"}</p>

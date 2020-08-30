@@ -18,9 +18,13 @@
             text-align: center;
             cursor: pointer;
             user-select: none;
+            top: -30px;
+            position: relative;
+            width: 40px;
+            left: 5px;
         }
 
-        img {
+        .logo {
             transform: rotate(90deg) scale(-1);
             width: 120px;
             position: inherit;

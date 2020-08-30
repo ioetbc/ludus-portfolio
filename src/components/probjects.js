@@ -163,13 +163,15 @@ class Probjects extends Component {
               style={{ justifyContent: "flex-end" }}
             >
               <div id="target2" className="thumbnailWrapper">
+              <Link to="/qiva">
                 <div className="imageWrapper">
                   <img id="hello2" className="thumbnail" src={Placeholder2} />
                   <div className="thumbnailContent">
                     <p className="thumbnailNumber font__small">02.</p>
-                    <p className="thumbnailTitle font__medium">the Winchester Orangery</p>
+                    <p className="thumbnailTitle font__medium">Qiva</p>
                   </div>
                 </div>
+              </Link>
               </div>
             </div>
           </div>
