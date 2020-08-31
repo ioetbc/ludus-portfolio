@@ -10,20 +10,27 @@ class Video extends  Component {
   componentDidMount() {
     const isDesktop = window.matchMedia("(min-width: 1000px)").matches;
 
-    if (this.props.autoPlay && isDesktop) {
-        const section = document.getElementById(this.props.id);
+    if (this.props.autoPlay) {
+        const video = document.getElementById(this.props.id);
         const options = { threshold: 0.2 };
         const observer = new IntersectionObserver((entries, observer) => {
         entries.forEach((element) => {
-          if (element.isIntersecting) {
-            document.getElementById(this.props.id).play();
-          } else if (document.getElementById(this.props.id)) {
-            document.getElementById(this.props.id).pause();
+
+          if (isDesktop) {
+            if (element.isIntersecting) {
+              video.play();
+            } else if (document.getElementById(this.props.id)) {
+              video.pause();
+            }
+          } else {
+            if (!element.isIntersecting) {
+              video.pause();
+            }
           }
         });
       }, options);
 
-      observer.observe(section);
+      observer.observe(video);
     }
 
     if (this.props.hasSound) {
