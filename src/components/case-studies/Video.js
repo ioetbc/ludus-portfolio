@@ -23,7 +23,7 @@ class Video extends  Component {
               video.pause();
             }
           } else {
-            if (!element.isIntersecting) {
+            if (!element.isIntersecting && !video.paused) {
               video.pause();
             }
           }
@@ -44,7 +44,7 @@ class Video extends  Component {
 
     if (type === 'play') {
       if (video.paused) video.play();
-      else if (video.play) video.pause();
+      else video.pause();
     }
 
     if (type === 'sound') {
