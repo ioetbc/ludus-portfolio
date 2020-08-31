@@ -31,7 +31,7 @@ class LockDownLudere extends Component {
               </div>
             </Link>
 
-            <Video url="lockdown/1_LockDownLudere.mp4" id="non-auto" />
+            <Video url="lockdown/1_LockDownLudere.mp4" id="non-auto" autoPlay mainVideo  />
 
             <Colunmn
               class="col3"
@@ -69,12 +69,8 @@ class LockDownLudere extends Component {
             twoUp={["lockdown/6_l.jpg", "lockdown/6_R.gif"]}
           />
 
-          <Video url="lockdown/7_Blank-render.mp4" autoPlay />
+          <Video url="lockdown/7_Blank-render.mp4" id="vector-video" autoPlay />
 
-
-
-
-            
           </main>
         </div>
       </Fragment>

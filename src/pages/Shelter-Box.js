@@ -1,5 +1,5 @@
 import React, { Component, Fragment } from "react";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { BrowserRouter as Link } from "react-router-dom";
 import Header from "../components/case-studies/Header.js";
 import MobileHeader from "../components/MobileHeader";
 import Video from "../components/case-studies/Video.js";
@@ -31,7 +31,7 @@ class ShelterBox extends Component {
               </div>
             </Link>
 
-            <Video url="shelterBox/1_Shelterbox_Animation_2.mp4" id="non-auto" />
+            <Video url="shelterBox/1_Shelterbox_Animation_2.mp4" id="non-auto" autoPlay mainVideo  />
 
             <Colunmn
               class="col3"

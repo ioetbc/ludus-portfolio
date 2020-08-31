@@ -38,7 +38,7 @@ class WorkLock extends Component {
               </div>
             </Link>
 
-            <Video url="worklock/website.mp4" id="main-video" />
+            <Video url="worklock/website.mp4" id="main-video" autoPlay mainVideo />
 
             <Colunmn
               class="col3"

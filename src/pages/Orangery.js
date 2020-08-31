@@ -32,7 +32,7 @@ class Orangery extends Component {
               </div>
             </Link>
 
-            <Video url="orangery/1_animation.mp4" id="non-auto" />
+            <Video url="orangery/1_animation.mp4" id="non-auto" autoPlay mainVideo  />
 
 
             <Colunmn

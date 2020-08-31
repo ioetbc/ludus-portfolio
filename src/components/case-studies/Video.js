@@ -31,7 +31,7 @@ const Video = (props) => {
   const isDesktop = window.matchMedia("(min-width: 1000px)").matches;
   let renderControls;
 
-  if (isDesktop) {
+  if (isDesktop && props.autoPlay) {
     if (props.autoPlay) {
       renderControls = false;
     } else {
@@ -49,7 +49,7 @@ const Video = (props) => {
               className='video'
               loop
               id={props.id}
-              // autoPlay={props.autoPlay}
+              autoPlay={!!props.mainVideo}
               poster="https://www.emailonacid.com/images/blog_images/Emailology/2013/html5_video/bunny_cover.jpg"
             >
                 <source

@@ -36,6 +36,8 @@ class Quiva extends Component {
             <Video
               url="qiva/main.mp4"
               id="non-auto"
+              autoPlay
+              mainVideo 
             />
 
             <Colunmn
