@@ -31,7 +31,13 @@ class LockDownLudere extends Component {
               </div>
             </Link>
 
-            <Video url="lockdown/1_LockDownLudere.mp4" id="non-auto" autoPlay mainVideo  />
+            <Video
+              url="lockdown/1_LockDownLudere.mp4"
+              id="non-auto"
+              autoPlay
+              mainVideo
+              hasSound
+            />
 
             <Colunmn
               class="col3"

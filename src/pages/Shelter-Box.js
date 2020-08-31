@@ -31,7 +31,7 @@ class ShelterBox extends Component {
               </div>
             </Link>
 
-            <Video url="shelterBox/1_Shelterbox_Animation_2.mp4" id="non-auto" autoPlay mainVideo  />
+            <Video url="shelterBox/1_Shelterbox_Animation_2.mp4" id="non-auto" autoPlay mainVideo hasSound />
 
             <Colunmn
               class="col3"

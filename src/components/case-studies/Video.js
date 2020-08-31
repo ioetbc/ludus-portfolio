@@ -1,65 +1,93 @@
-import React, { useEffect } from "react";
+import React, { Component } from "react";
 
-const VideoControls = (id) => {
-    const video = document.getElementById(id);
+class Video extends  Component {
+  constructor(props) {
+    super(props);
+    this.state = { mute: true }
+    this.VideoControls = this.VideoControls.bind(this);
+  }
 
-    if (video.paused) video.play();
-    else if (video.play) video.pause();
-}
-
-const Video = (props) => {
-  useEffect(() => {
+  componentDidMount() {
     const isDesktop = window.matchMedia("(min-width: 1000px)").matches;
 
-    if (props.autoPlay && isDesktop) {
-        const section = document.getElementById(props.id);
+    if (this.props.autoPlay && isDesktop) {
+        const section = document.getElementById(this.props.id);
         const options = { threshold: 0.2 };
         const observer = new IntersectionObserver((entries, observer) => {
         entries.forEach((element) => {
           if (element.isIntersecting) {
-            document.getElementById(props.id).play();
-          } else if (document.getElementById(props.id)) {
-            document.getElementById(props.id).pause();
+            document.getElementById(this.props.id).play();
+          } else if (document.getElementById(this.props.id)) {
+            document.getElementById(this.props.id).pause();
           }
         });
       }, options);
 
       observer.observe(section);
     }
-  }, []);
 
-  const isDesktop = window.matchMedia("(min-width: 1000px)").matches;
-  let renderControls;
-
-  if (isDesktop && props.autoPlay) {
-    if (props.autoPlay) {
-      renderControls = false;
-    } else {
-      renderControls = true;
+    if (this.props.hasSound) {
+      const video = document.getElementById(this.props.id);
+      video.volume = 0;
     }
-  } else {
-    renderControls = true
-  }
+  };
+
+  VideoControls(id, type) {
+    const video = document.getElementById(id);
+
+    if (type === 'play') {
+      if (video.paused) video.play();
+      else if (video.play) video.pause();
+    }
+
+    if (type === 'sound') {
+      if (video.volume === 0) {
+        this.setState({ mute: false }, () => video.volume = 1);
+      } else {
+        this.setState({ mute: true }, () => video.volume = 0);
+      }
+    }
+}
 
 
-  return (
-    <section>
-        <div className={`video-wrapper controls-${renderControls} video-subpage`} onClick={() => renderControls && VideoControls(props.id)}>
-            <video
-              className='video'
-              loop
-              id={props.id}
-              autoPlay={!!props.mainVideo}
-              poster="https://www.emailonacid.com/images/blog_images/Emailology/2013/html5_video/bunny_cover.jpg"
-            >
+  render() {
+    const { mute } = this.state;
+    const isDesktop = window.matchMedia("(min-width: 1000px)").matches;
+    let renderControls;
+  
+    if (isDesktop && this.props.autoPlay) {
+      if (this.props.autoPlay) {
+        renderControls = false;
+      } else {
+        renderControls = true;
+      }
+    } else {
+      renderControls = true
+    }
+
+    return (
+      <section>
+          <div className={`video-wrapper controls-${renderControls} video-subpage`} onClick={() => renderControls && this.VideoControls(this.props.id, 'play')}>
+              {this.props.hasSound &&
+                <p className="toggle-mute" onClick={() => this.VideoControls(this.props.id, 'sound')}>{mute ? 'Unmute' : "Mute"}</p>
+              }  
+              <video
+                className='video'
+                loop
+                id={this.props.id}
+                autoPlay={!!this.props.mainVideo && isDesktop}
+                poster="https://www.emailonacid.com/images/blog_images/Emailology/2013/html5_video/bunny_cover.jpg"
+                mute
+              >
                 <source
-                src={require(`../../images/probjects/${props.url}`)}
-                type="video/mp4"
+                  src={require(`../../images/probjects/${this.props.url}`)}
+                  type="video/mp4"
                 />
-            </video>
-      </div>
-    </section>
-  );
+              </video>
+        </div>
+      </section>
+    );
+  }
 };
 
 export default Video;

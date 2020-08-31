@@ -35,6 +35,7 @@ class Homepage extends Component {
       .clientHeight;
     console.log("widthOfDoc", widthOfDocument);
 
+    // TODO find a better way
     const video = document.getElementById('vimeo_player');
     video.volume = 0;
 

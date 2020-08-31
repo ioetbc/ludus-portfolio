@@ -41,20 +41,6 @@
         margin-bottom: 0;
     }
 
-    .toggle-mute {
-        position: absolute;
-        top: 15px;
-        right: 25px;
-        color: white;
-        cursor: pointer;
-        z-index: 1;
-
-        @media screen and (min-width: '1000px') {
-            top: 30px;
-            right: 30px;
-        }
-    }
-
     .intro-video {
         @media screen and (max-width: '1000px') {
             width: 100vw;
@@ -62,5 +48,19 @@
         @media screen and (min-width: '1000px') {
             height: 100vh;
         }
+    }
+}
+
+.toggle-mute {
+    position: absolute;
+    top: 15px;
+    right: 25px;
+    color: white;
+    cursor: pointer;
+    z-index: 1;
+
+    @media screen and (min-width: '1000px') {
+        top: 30px;
+        right: 30px;
     }
 }
