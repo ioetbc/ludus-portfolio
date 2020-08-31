@@ -2,23 +2,19 @@ import React, { useEffect } from "react";
 
 const VideoControls = (id) => {
     const video = document.getElementById(id);
-    const isDesktop = window.matchMedia("(min-width: 1000px)").matches;
 
-    if (isDesktop) {
-    if (video.paused) {
-        video.play();
-    } else {
-        video.pause();
-    }
-    }
+    if (video.paused) video.play();
+    else if (video.play) video.pause();
 }
 
 const Video = (props) => {
   useEffect(() => {
-    if (props.cPlay) {
-      const section = document.getElementById(props.id);
-      const options = { threshold: 0.2 };
-      const observer = new IntersectionObserver((entries, observer) => {
+    const isDesktop = window.matchMedia("(min-width: 1000px)").matches;
+
+    if (props.autoPlay && isDesktop) {
+        const section = document.getElementById(props.id);
+        const options = { threshold: 0.2 };
+        const observer = new IntersectionObserver((entries, observer) => {
         entries.forEach((element) => {
           if (element.isIntersecting) {
             document.getElementById(props.id).play();
@@ -32,12 +28,30 @@ const Video = (props) => {
     }
   }, []);
 
-  console.log('../../images/probjects/${props.url}', `../../images/probjects/${props.url}`)
+  const isDesktop = window.matchMedia("(min-width: 1000px)").matches;
+  let renderControls;
+
+  if (isDesktop) {
+    if (props.autoPlay) {
+      renderControls = false;
+    } else {
+      renderControls = true;
+    }
+  } else {
+    renderControls = true
+  }
+
 
   return (
     <section>
-        <div className={`video-wrapper controls-${!props.autoPlay} video-subpage`} onClick={() => !props.autoPlay && VideoControls(props.id)}>
-            <video className='video' loop id={props.id} autoPlay={props.autoPlay}>
+        <div className={`video-wrapper controls-${renderControls} video-subpage`} onClick={() => renderControls && VideoControls(props.id)}>
+            <video
+              className='video'
+              loop
+              id={props.id}
+              // autoPlay={props.autoPlay}
+              poster="https://www.emailonacid.com/images/blog_images/Emailology/2013/html5_video/bunny_cover.jpg"
+            >
                 <source
                 src={require(`../../images/probjects/${props.url}`)}
                 type="video/mp4"

@@ -6,10 +6,12 @@ import Video from "../components/case-studies/Video.js";
 import Colunmn from "../components/case-studies/Column.js";
 import Grid from "../components/case-studies/Grid.js";
 import CloseIcon from "../images/close-icon.svg";
+import ScrollTop from '../utils/scrollTop';
 
 class LockDownLudere extends Component {
   componentDidMount() {
       document.getElementsByTagName("body")[0].style.overflow = "scroll";
+      ScrollTop();
   }
 
   render() {

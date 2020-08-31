@@ -7,15 +7,23 @@ import Colunmn from "../components/case-studies/Column.js";
 import Grid from "../components/case-studies/Grid.js";
 import Quote from "../components/case-studies/Quote.js";
 import CloseIcon from "../images/close-icon.svg";
+import ScrollTop from '../utils/scrollTop';
 
 class WorkLock extends Component {
   componentDidMount() {
       document.getElementsByTagName("body")[0].style.overflow = "scroll";
+      ScrollTop();
   }
+
+  //  TODO MAKE A SUBPAGE COMPONENT THAT WRAPS CHILD CONTENT IN 
+  // 1. SCROLLTOP
+  // 2. MOBILEHEADER
+  // 3. HOME & NEXT PAGE BUTTON ETC.
 
   render() {
     return (
       <Fragment>
+      <ScrollTop />
         <div className="projectWrapper" id="case-study-wrapper">
           <MobileHeader />
           <Header
@@ -30,9 +38,7 @@ class WorkLock extends Component {
               </div>
             </Link>
 
-            <Video url="worklock/website.mp4" id="non-auto" />
-
-            <Video url="worklock/website.mp4" id="main-video" autoPlay />
+            <Video url="worklock/website.mp4" id="main-video" />
 
             <Colunmn
               class="col3"
